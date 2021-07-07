@@ -1,6 +1,9 @@
 :root{
     --main-color: #c5f436;
 }
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -35,8 +38,52 @@ body{
     width: 30px;
     padding: 8px 0;
 }
-.settings-box .settings-content{
-    
+.settings-box .option-box{
+    padding: 10px;
+    text-align: center;
+    background-color: #EEE;
+    margin: 10px;
+}
+.settings-box .option-box h4{
+    margin: 0;
+    color: #666;
+}
+.settings-box .option-box .colors-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+.settings-box .option-box .colors-list li{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    cursor: pointer;
+    border: 3px solid #EEE;
+    display: inline-block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.settings-box .option-box .colors-list li.active{
+    border-color: #FFF;
+}
+.settings-box .option-box .colors-list li:nth-child(1){
+    background-color: #c5f436;
+}
+.settings-box .option-box .colors-list li:nth-child(2){
+    background-color: #DE354C;
+}
+.settings-box .option-box .colors-list li:nth-child(3){
+    background-color: #932432;
+}
+.settings-box .option-box .colors-list li:nth-child(4){
+    background-color: #FF9800;
+}
+.settings-box .option-box .colors-list li:nth-child(5){
+    background-color: #03A9F4;
 }
 /* End Settings Box */
 
