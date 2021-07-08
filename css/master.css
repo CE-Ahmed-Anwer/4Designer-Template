@@ -47,6 +47,7 @@ body{
 .settings-box .option-box h4{
     margin: 0;
     color: #666;
+    font-size: 14px;
 }
 .settings-box .option-box .colors-list{
     list-style: none;
@@ -84,6 +85,27 @@ body{
 }
 .settings-box .option-box .colors-list li:nth-child(5){
     background-color: #03A9F4;
+}
+.settings-box .random-backgrounds .yes,
+.settings-box .random-backgrounds .no{
+    width: 50px;
+    background-color: var(--main-color);
+    color: #FFF;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.settings-box .random-backgrounds span.active{
+    opacity: 1;
 }
 /* End Settings Box */
 
