@@ -130,3 +130,57 @@ window.onscroll = function() {
         });
     }
 };
+
+// Create Popup With The Image
+let OurGallery = document.querySelectorAll(".gallery img");
+OurGallery.forEach(img => {
+    img.addEventListener('click', (e) => {
+        // Create Overlay Element
+        let overlay = document.createElement("div");
+        // Add Class To Overlay
+        overlay.className = "popup-overlay";
+        // Append Overlay To The Body
+        document.body.appendChild(overlay);
+        // Create The Popup
+        let popupBox = document.createElement("div");
+        // Add Class To The Popup Box
+        popupBox.className = "popup-box";
+        if (img.alt != null) {
+            // Create Heading
+            let imageHeading = document.createElement("h3");
+            // Create Text For Heading
+            let imageText = document.createTextNode(img.alt);
+            // Append The Text To The Heading
+            imageHeading.appendChild(imageText);
+            // Append The Heading To The Popup Box
+            popupBox.appendChild(imageHeading);
+        }
+        // Create The Image
+        let popupImage = document.createElement("img");
+        // Set Image Source
+        popupImage.src = img.src;
+        // Add Image To Popup Box
+        popupBox.appendChild(popupImage);
+        // Append The Popup Box To Body
+        document.body.appendChild(popupBox);
+        // Create The Close Span
+        let closeButton = document.createElement("span");
+        // Create The Close Button Text
+        let closeButtonText = document.createTextNode("X");
+        // Append Text To Close Button
+        closeButton.appendChild(closeButtonText);
+        // Add Class To Close Button
+        closeButton.className = "close-button";
+        // Add Close Button To The Popup Box
+        popupBox.appendChild(closeButton);
+    });
+});
+// Close Popup
+document.addEventListener("click", function (e) {
+    if (e.target.className == "close-button") {
+        // Remove The Current Popup
+        e.target.parentNode.remove();
+        // Remove Overlay
+        document.querySelector(".popup-overlay").remove();
+    }
+});
