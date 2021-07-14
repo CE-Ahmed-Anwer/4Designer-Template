@@ -184,12 +184,22 @@ document.addEventListener("click", function (e) {
         document.querySelector(".popup-overlay").remove();
     }
 });
-// Select All Bullets
-const allBullets = document.querySelectorAll(".nav-bullets .bullet");
-allBullets.forEach(bullet => {
-    bullet.addEventListener("click", (e) => {
-        document.querySelector(e.target.dataset.section).scrollIntoView({
-            behavior: 'smooth'
+
+function scrollToSection(elements){
+    elements.forEach(element => {
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(e.target.dataset.section).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
+}
+
+// Select All Bullets
+const allBullets = document.querySelectorAll(".nav-bullets .bullet");
+scrollToSection(allBullets);
+
+// Select All Links
+const allLinks = document.querySelectorAll(".links a");
+scrollToSection(allLinks);
