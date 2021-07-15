@@ -254,6 +254,16 @@ body{
     cursor: pointer;
     margin-top: 15px;
     display: none;
+    position: relative;
+}
+.header-area .toggle-menu.menu-active:before{
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #FFF transparent;
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
 }
 .header-area .toggle-menu:focus{
     outline: none;
@@ -292,6 +302,29 @@ body{
 @media(max-width: 991px){
     .header-area .links {
         display: none;
+    }
+    .header-area .links.open{
+        background-color: white;
+        padding: 10px;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+    .header-area .links.open li{
+        display: block;
+        margin: 10px;
+    }
+    .header-area .links.open li a{
+        color: var(--main-color);
+        font-weight: bold;
     }
     .header-area .toggle-menu{
         display: inline-block;
