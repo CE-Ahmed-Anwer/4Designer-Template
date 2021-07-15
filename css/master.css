@@ -114,6 +114,22 @@ body{
 .settings-box .option-box span.active{
     opacity: 1;
 }
+.settings-box .reset-options{
+    background-color: #F44336;
+    border: none;
+    color: #FFF;
+    width: 178px;
+    margin: 10px auto;
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
 /* End Settings Box */
 /* Start Nav Bullets */
 .nav-bullets{

@@ -232,3 +232,12 @@ bulletsSpan.forEach(span => {
         handleActive(e);
     });
 });
+
+// Reset Button
+document.querySelector(".reset-options").onclick = function(){
+    localStorage.removeItem("color_option");
+    localStorage.removeItem("background_option");
+    localStorage.removeItem("bullets_option"); 
+    // Reload Window
+    window.location.reload();
+};
