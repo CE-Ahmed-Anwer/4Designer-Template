@@ -896,6 +896,14 @@ body{
     -o-transition: 0.3s;
 }
 /* End Contact Us */
+/* Start Footer */
+.footer{
+    background-color: #333;
+    color: var(--main-color);
+    padding: 20px;
+    text-align: center;
+}
+/* End Footer */
 /* Start Grid System */
 @media(min-width: 576px){ /* Small Devices */
     .container{
