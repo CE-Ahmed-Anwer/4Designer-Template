@@ -712,6 +712,7 @@ body{
 }
 .contact form textarea{
     height: 150px;
+    resize: none;
 }
 .contact form input[type="submit"]{
     padding: 10px;
@@ -749,3 +750,25 @@ body{
     -o-transition: 0.3s;
 }
 /* End Contact Us */
+/* Start Grid System */
+@media(min-width: 576px){ /* Small Devices */
+    .container{
+        max-width: 540px;
+    }
+}
+@media(min-width: 768px){ /* Medium Devices */
+    .container{
+        max-width: 720px;
+    }
+}
+@media(min-width: 992px){ /* Desktops */
+    .container{
+        max-width: 960px;
+    }
+}
+@media(min-width: 1200px){ /* Large Screens */
+    .container{
+        max-width: 1140px;
+    }
+}
+/* End Grid System */
